@@ -8,10 +8,11 @@ services:
       - 80:80
       - 8080:8080
       - 8081:8081
+      - 8082:8082
+      - 8083:8083
+      - 8084:8084
     restart: always
   nginx_service:
-    depends_on:
-      - reverseproxy_service
     image: nginx_image
     container_name: nginx_container
     build: ./nginx
@@ -19,8 +20,6 @@ services:
       - 80
     restart: always
   apache_service:
-    depends_on:
-      - reverseproxy_service
     image: apache_image
     container_name: apache_container
     build: ./apache
