@@ -1,4 +1,4 @@
-# containerized-reverse-proxy-localhost
+# nginx-reverse-proxy-in-docker
 
 - usage
 
