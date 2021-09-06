@@ -15,7 +15,7 @@ services:
       - 80
     restart: always
     depends_on:
-      - reverseproxy_service
+      - 'reverseproxy_service'
   apache_service:
     image: apache_image
     container_name: apache_container
@@ -24,7 +24,7 @@ services:
       - 80
     restart: always
     depends_on:
-      - reverseproxy_service
+      - 'reverseproxy_service'
   node_service:
     image: node_image
     container_name: node_container
@@ -33,7 +33,7 @@ services:
       - 3000
     restart: always
     depends_on:
-      - reverseproxy_service
+      - 'reverseproxy_service'
   node2_service:
     image: node2_image
     container_name: node2_container
@@ -42,4 +42,4 @@ services:
       - 3000
     restart: always
     depends_on:
-      - reverseproxy_service
+      - 'reverseproxy_service'
