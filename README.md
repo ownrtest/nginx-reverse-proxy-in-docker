@@ -1,5 +1,7 @@
 # nginx-reverse-proxy-in-docker
 
+[working solution on okteto](https://reverseproxy-nginx-reverse-proxy-in-docker-bronifty.cloud.okteto.net/)
+
 - usage
 
 ```
