@@ -4,6 +4,8 @@
 
 - [Youtube Tutorial](https://youtu.be/bUBBv3PkxMI)
 
+- [Blog Poast](https://dev.to/bronifty/nginx-reverse-proxy-in-docker-42lm)
+
 - usage
 
 ```
