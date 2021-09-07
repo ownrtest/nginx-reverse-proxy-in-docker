@@ -11,8 +11,8 @@ docker-compose up -d
 - GET endpoints:
 
   - /
+  - /nginx
   - /apache
-  - /node
   - /node2
 
 - notes:
