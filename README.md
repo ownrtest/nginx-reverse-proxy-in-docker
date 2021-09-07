@@ -8,7 +8,7 @@
 docker-compose up -d
 ```
 
-- GET endpoints:
+- GET endpoints (4 servers being proxied - hit each one in your browser window):
 
   - /
   - /nginx
