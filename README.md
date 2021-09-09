@@ -26,6 +26,7 @@ docker-compose up -d
 - other helpful docker commands:
 
 ```
+docker-compose down
 docker container stop $(docker ps -aq)
 docker system prune -af
 ```
