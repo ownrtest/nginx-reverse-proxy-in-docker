@@ -1,6 +1,25 @@
-const express = require('express');
-const app = express();
-const PORT = 3000;
-// listen on PORT 3000
-app.get('/', (req, res) => res.send('node2 on PORT 3000'));
-app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
+var express = require('express');
+var app = express();
+var path = require('path');
+var PORT = 3000;
+
+// Without middleware
+app.get('/', function (req, res) {
+  var options = {
+    root: path.join(__dirname),
+  };
+
+  var fileName = 'index.html';
+  res.sendFile(fileName, options, function (err) {
+    if (err) {
+      next(err);
+    } else {
+      console.log('Sent:', fileName);
+    }
+  });
+});
+
+app.listen(PORT, function (err) {
+  if (err) console.log(err);
+  console.log('Server listening on PORT', PORT);
+});
