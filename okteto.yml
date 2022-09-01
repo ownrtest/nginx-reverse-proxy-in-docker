@@ -1,0 +1,13 @@
+deploy:
+  compose:
+    - file: docker-compose.yml
+      services:
+        - node
+        - node2
+  endpoints:
+    - path: /api/v1
+      service: node
+      port: 3000
+    - path: /api/v2
+      service: node2
+      port: 3000
