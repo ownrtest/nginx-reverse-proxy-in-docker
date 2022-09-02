@@ -26,7 +26,7 @@ services:
     depends_on:
       - reverseproxy
   node:
-    image: node_image
+    image: okteto.dev/node_image
     container_name: node_container
     build: ./node
     ports:
@@ -35,7 +35,7 @@ services:
     depends_on:
       - reverseproxy
   node2:
-    image: node2_image
+    image: okteto.dev/node2_image
     container_name: node2_container
     build: ./node2
     ports:
