@@ -1,14 +1,14 @@
 version: '3.9'
 services:
   reverseproxy:
-    image: reverseproxy_image
+    image: okteto.dev/reverseproxy_image
     container_name: reverseproxy_container
     build: .
     ports:
       - 80:80
     restart: always
   nginx:
-    image: nginx_image
+    image: okteto.dev/nginx_image
     container_name: nginx_container
     build: ./nginx
     ports:
@@ -17,7 +17,7 @@ services:
     depends_on:
       - reverseproxy
   apache:
-    image: apache_image
+    image: okteto.dev/apache_image
     container_name: apache_container
     build: ./apache
     ports:
