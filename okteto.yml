@@ -4,12 +4,12 @@ deploy:
       services:
         - node1
         - node2
-  endpoints:
-    node1:
-      - path: /
-        service: node1
-        port: 3000
-         
+  # endpoints:
+  #   node1:
+  #     - path: /
+  #       service: node1
+  #       port: 3000
+
     # node2:
     #   - path: /
     #     service: node2
