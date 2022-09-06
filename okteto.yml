@@ -9,7 +9,8 @@ deploy:
       - path: /
         service: node1
         port: 3000
-    node2:
-      - path: /
-        service: node2
-        port: 3000
+         
+    # node2:
+    #   - path: /
+    #     service: node2
+    #     port: 3000
