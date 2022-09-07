@@ -1,16 +1,25 @@
-deploy:
-  compose:
-    - file: docker-compose.yml
-      services:
-        - node1
-        - node2
-  # endpoints:
-  #   node1:
-  #     - path: /
-  #       service: node1
-  #       port: 3000
+services:
+  node:
+    build: node
+    ports:
+      - 3000:3000
 
-    # node2:
-    #   - path: /
-    #     service: node2
-    #     port: 3000
+  redis:
+    image: redis
+    ports:
+      - 6379
+    volumes:
+      - redis:/data
+
+volumes:
+  redis:
+
+endpoints:
+  redis:
+    - path: /
+      service: redis
+      port: 6379
+  web:
+    - path: /
+      service: node
+      port: 3000
